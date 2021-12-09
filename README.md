@@ -2,20 +2,10 @@
 
 My cum plugins
 
-## [Nsfw Tags](https://github.com/E-boi/cumcord-plugins/tree/master/nsfwtags)
+## [BetterBG](https://therealgwjosh.github.io/Cumcord-Plugins/BetterBG)
 
-Adds a more visible tags for nsfw channels.
+Original Plugin > User Backgrounds By YellowSink
 
-Plugin link (how you add the plugin to cumcord): https://e-boi.github.io/cumcord-plugins/nsfwtags/dist
+"USRBG, except instead of CSS it uses React so it doesn't perform like ass and also classes aren't an issue"
 
-## [Link Channels](https://github.com/E-boi/cumcord-plugins/tree/master/linkchannels)
-
-Adds an Icon to channels that copys <#channelId>. (channelId is replaced).
-
-Plugin link (how you add the plugin to cumcord): https://e-boi.github.io/cumcord-plugins/linkchannels/dist
-
-## [Custom RPC](https://github.com/E-boi/cumcord-plugins/tree/master/customrpc)
-
-Make your own rpc within discord
-
-Plugin link (how you add the plugin to cumcord): https://e-boi.github.io/cumcord-plugins/customrpc/dist
+Plugin link (how you add the plugin to cumcord): https://therealgwjosh.github.io/Cumcord-Plugins/BetterBG
