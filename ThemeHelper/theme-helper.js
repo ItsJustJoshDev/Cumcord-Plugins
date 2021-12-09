@@ -30,7 +30,7 @@ export default (data) => {
   const store = data.persist.store;
   const ghostStore = data.persist.ghost;
 
-  const friendRow = webpack.findByDisplayName("avatar");
+  const friendRow = webpack.findByDisplayName("PeopleListItem");
   const getPrimaryColorForAvatar = webpack.findByProps(
     "getPrimaryColorForAvatar"
   );
