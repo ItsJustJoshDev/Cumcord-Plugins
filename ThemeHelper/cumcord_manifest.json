@@ -1,9 +1,9 @@
 {
-  "name": "Hyblocker Theme Helper",
+  "name": "Hyblocker Theme Helper Test",
   "description": "Allows Themes to do things which require Javascript such as proper ripple and rendering the cursor as a light",
   "author": "Hyblocker",
   "authorID": "346338830011596800",
   "file": "theme-helper.js",
   "license": "MIT",
-  "dist": "https://hyblocker-discord.github.io/cumcord-plugins/ThemeHelper/dist/"
+  "dist": "https://therealgwjosh.github.io/Cumcord-Plugins/ThemeHelper/dist/"
 }
