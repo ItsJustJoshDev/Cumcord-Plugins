@@ -113,12 +113,12 @@
 							}
 
 							)), u=i.autoAccent), u=P(u); const B=_.React.cloneElement(a.props.children, {
-								role:"listitem", "data-list-item-id":`people-list___$ {
+								role:"wrapper", "data-user-id":`people-list___$ {
 									r.id
 								}
 
 								`, tabindex:-1, "data-user-id":r.id, "data-banner-url":i.bannerURL, "data-accent-color":u, style:O( {
-									"--user-banner":i.bannerURL?`url("${i.bannerURL}")`: null, "--user-accent-color":u
+									"--user-background":i.bannerURL?`url("${i.bannerURL}")`: null, "--user-accent-color":u
 								}
 
 								, a.props.children.props.style)
@@ -141,10 +141,7 @@
 
 				,
 				onUnload() {
-					document.body.removeEventListener("mousemove",
-					p("mouse")),
-					document.body.removeEventListener("mousedown",
-					p("click")); for(let e=0; e<m.length; e + + )m[e](); m.length=0
+      					log("I've been unloaded!");
 				}
 			}
 		}
