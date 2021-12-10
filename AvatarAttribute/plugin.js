@@ -1,3 +1,10 @@
+import { log } from '@cumcord/utils/logger';
+
+export default (data) => {
+  return {
+    onLoad() {
+      log("I've been loaded!");
+
 const addAttrToEl = (el) => {
   const userId = el.getElementsByTagName('img')[0].src.split('/')[4];
   el.setAttribute('data-user-id', userId);
@@ -11,6 +18,10 @@ const handler = async () => {
 
     addAttrToEl(el);
   }
-};
+
+    },
+    onUnload() {
+      log("I've been unloaded!");
+    }
+  }
 }
-};
