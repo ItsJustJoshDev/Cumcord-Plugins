@@ -22,10 +22,9 @@ export default (data) => {
 
     let interval;
 
-    for (let el of els) {
-      if (el.getAttribute('data-user-id')) continue;
+    for (let _el of els) {
+      if (webpack.getAttribute('data-user-id')) continue;
   
-      addAttrToEl(el);
     }
   };
 
