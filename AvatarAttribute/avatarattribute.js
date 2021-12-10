@@ -11,7 +11,7 @@ export default (data) => {
   const store = data.persist.store;
   const ghostStore = data.persist.ghost;
 
-  const userId = webpack.findByProps('img')[0].src.split('/')[4];
+  const userId = webpack.findByProps('img')[0].setAttribute.split('/')[4];
   const el = webpack.setAttribute('data-user-id', userId);
   const getPrimaryColorForAvatar = webpack.findByProps(
     "getPrimaryColorForAvatar"
