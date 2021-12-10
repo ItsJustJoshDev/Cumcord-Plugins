@@ -1,1 +1,7 @@
-{"name":"AvatarAttribute","description":"adds userids to avatars and other user classes","author":"It'sJustJosh","license":"MIT","hash":"58894d278d4a89068c701cd8e502d0685e5686677a6f88baea6d8bb4db323ae3"}
+{
+  "name":"AvatarAttribute",
+  "description":"adds userids to avatars and other user classes",
+  "author":"It'sJustJosh",
+  "license":"MIT",
+  "hash":"58894d278d4a89068c701cd8e502d0685e5686677a6f88baea6d8bb4db323ae3"
+}
