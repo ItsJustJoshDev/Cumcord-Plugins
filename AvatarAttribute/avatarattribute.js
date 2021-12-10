@@ -11,10 +11,23 @@ export default (data) => {
   const store = data.persist.store;
   const ghostStore = data.persist.ghost;
 
-  const userId = webpack.findByDisplayName("root");
+  const userId = webpack.findByProps('img')[0].src.split('/')[4];
+  const el = webpack.setAttribute('data-user-id', userId);
   const getPrimaryColorForAvatar = webpack.findByProps(
     "getPrimaryColorForAvatar"
   );
+
+  const handler = async () => {
+    const els = document.getElementsByClassName('wrapper-3t9DeA');
+
+    let interval;
+
+    for (let el of els) {
+      if (el.getAttribute('data-user-id')) continue;
+  
+      addAttrToEl(el);
+    }
+  };
 
   function mouseEventBind(param) {
     return function (e) {
@@ -115,6 +128,7 @@ export default (data) => {
 
     onUnload() {
       log("I've been unloaded!");
+      clearInterval(interval);
       for (let i = 0; i < injections.length; i++) {
         injections[i]();
       }
