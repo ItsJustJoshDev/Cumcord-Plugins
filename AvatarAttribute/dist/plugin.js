@@ -1,0 +1,1 @@
+(function(c,o,s,r){"use strict";var e=t=>{t.persist.store,t.persist.ghost,r.webpack.findByDisplayName("PeopleListItem"),r.webpack.findByProps("getPrimaryColorForAvatar")};return e})(cumcord.utils.logger,cumcord.utils,cumcord.patcher,cumcord.modules);

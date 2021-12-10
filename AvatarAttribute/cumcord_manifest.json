@@ -1,0 +1,8 @@
+{
+  "name": "AvatarAttribute",
+  "description": "adds userids to avatars and other user classes",
+  "author": "It'sJustJosh",
+  "file": "avatarattribute.js",
+  "license": "MIT",
+  "dist": "https://therealgwjosh.github.io/Cumcord-Plugins/AvatarAttribute/"
+}
