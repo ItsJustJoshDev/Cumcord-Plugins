@@ -1,5 +1,3 @@
-const version = '1.0.0';
-
 const addAttrToEl = (el) => {
   const userId = el.getElementsByTagName('img')[0].src.split('/')[4];
   el.setAttribute('data-user-id', userId);
@@ -14,20 +12,5 @@ const handler = async () => {
     addAttrToEl(el);
   }
 };
-
-let interval;
-
-export default {
-goosemodHandlers: {
-  onImport: async function () {
-    interval = setInterval(handler, 1000);
-  },
-
-  onRemove: async function () {
-    clearInterval(interval);
-  },
-
-
-
 }
 };
