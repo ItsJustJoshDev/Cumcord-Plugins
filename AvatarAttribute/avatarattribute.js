@@ -114,12 +114,13 @@ export default (data) => {
     },
 
     onUnload() {
+      log("I've been unloaded!");
       for (let i = 0; i < injections.length; i++) {
         injections[i]();
       }
       injections.length = 0;
-      },
+      }, 
      };
     }
-  }
+  } 
 };
