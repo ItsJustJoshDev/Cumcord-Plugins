@@ -1,5 +1,4 @@
-import * as webpackModules from "@cumcrod/webpackModules";
-import { React } from "@cumcord/modules/common";
+import * as webpackModules from "@cumcrod/webpack";
 import * as reactUtils from "@cumcord/reactUtils";
 import {patch} from "@cumcord/patcher";
 import {SpotifyPlayer} from "./SpotifyPlayer";
