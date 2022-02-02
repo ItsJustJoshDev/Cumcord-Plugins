@@ -1,0 +1,7 @@
+{
+  "name": "SpotifyControls",
+  "description": "Adds some Controls for Spotify to the panel.",
+  "author": "It'sJustJosh",
+  "file": "index.js",
+  "license": "MIT"
+}
