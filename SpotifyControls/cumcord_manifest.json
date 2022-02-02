@@ -1,6 +1,6 @@
 {
   "name": "SpotifyControls",
-  "description": "Adds some Controls for Spotify to the panel.",
+  "description": "See and control what you're listening to on Spotify.",
   "author": "It'sJustJosh",
   "file": "index.js",
   "license": "MIT"
