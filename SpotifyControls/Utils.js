@@ -1,3 +1,3 @@
 export function $(className) {
-  return "cumcord-spotify-controls-" + className;
+  return ".spotify-controls-" + className;
 }
