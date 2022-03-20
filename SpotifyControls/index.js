@@ -1,5 +1,5 @@
 import webpackModules from '@cumcord/modules/webpack';
-import reactUtils from '@cumcord/reactUtils';
+import reactUtils from '@cumcord/modules/common';
 import { patch } from '@cumcord/patcher';
 import { SpotifyPlayer } from './SpotifyPlayer';
 import { $ } from './Utils';
