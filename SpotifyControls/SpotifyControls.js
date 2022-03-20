@@ -1,4 +1,4 @@
-import * as webpackModules from "@cumcord/webpack";
+import webpackModules from "@cumcord/modules/webpack";
 import {PlayerStore} from "./PlayerStore";
 import {$} from "./Utils";
 

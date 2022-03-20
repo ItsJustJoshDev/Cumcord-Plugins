@@ -1,4 +1,4 @@
-import * as webpackModules from "@cumcord/webpack";
+import webpackModules from "@cumcord/modules/webpack";
 
 const Flux = webpackModules.findByProps("Store", "useStateFromStores");
 const Dispatcher = webpackModules.findByProps("isDispatching");

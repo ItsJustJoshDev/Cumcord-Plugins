@@ -1,11 +1,11 @@
-import * as webpackModules from "@cumcrod/webpack";
-import * as reactUtils from "@cumcord/reactUtils";
-import {patch} from "@cumcord/patcher";
-import {SpotifyPlayer} from "./SpotifyPlayer";
-import {$} from "./Utils";
+import webpackModules from '@cumcord/modules/webpack';
+import reactUtils from '@cumcord/reactUtils';
+import { patch } from '@cumcord/patcher';
+import { SpotifyPlayer } from './SpotifyPlayer';
+import { $ } from './Utils';
 
 const moduleCSS = `
-.${$("playback-bar")} {
+.${$('playback-bar')} {
   position: relative;
   height: 0.25em;
   width: 100%;
@@ -13,12 +13,12 @@ const moduleCSS = `
   background-size: 0% 100%, 100% 100%;
   background-repeat: no-repeat;
 }
-.${$("playback-bar")}:hover .${$("playback-thumb")},
-.${$("playback-bar")} .${$("playback-thumb")}:hover,
-.${$("playback-bar")} .${$("playback-thumb")}.${$("active")} {
+.${$('playback-bar')}:hover .${$('playback-thumb')},
+.${$('playback-bar')} .${$('playback-thumb')}:hover,
+.${$('playback-bar')} .${$('playback-thumb')}.${$('active')} {
   display: inline-block;
 }
-.${$("playback-thumb")} {
+.${$('playback-thumb')} {
   position: absolute;
   display: none;
   height: 0.8em;
@@ -30,12 +30,12 @@ const moduleCSS = `
   box-shadow: var(--elevation-stroke), var(--elevation-low)
   cursor: ew-resize;
 }
-.${$("player")} {
+.${$('player')} {
   margin: 0.25em;
   height: 2.5em;
   display: flex;
 }
-.${$("info-box")} {
+.${$('info-box')} {
   display: inline-flex;
   flex-grow: 1;
   flex-shrink: 1;
@@ -44,23 +44,23 @@ const moduleCSS = `
   white-space: nowrap;
   max-width: calc(100% - 7.5em);
 }
-.${$("info-box")}.${$("no-album")} {
+.${$('info-box')}.${$('no-album')} {
   max-width: calc(100% - 5em);
 }
-.${$("album-name")} {
+.${$('album-name')} {
   height: 1em;
   overflow: hidden;
   font-size: 0.8em;
 }
-.${$("track-name")} span,
-.${$("track-name")} a {
+.${$('track-name')} span,
+.${$('track-name')} a {
   color: var(--interactive-active);
 }
-.${$("album-name")} span,
-.${$("album-name")} a {
+.${$('album-name')} span,
+.${$('album-name')} a {
   color: var(--header-secondary);
 }
-@keyframes ${$("marquee")} {
+@keyframes ${$('marquee')} {
   0%,5% {
     transform: translate(0, 0);
   }
@@ -68,59 +68,59 @@ const moduleCSS = `
     transform: translate(-100%, 0);
   }
 }
-.${$("album-name")} a,
-.${$("track-name")} a,
-.${$("album-name")} span,
-.${$("track-name")} span {
+.${$('album-name')} a,
+.${$('track-name')} a,
+.${$('album-name')} span,
+.${$('track-name')} span {
   display: inline-block;
   height: inherit;
   width: 100%;
 }
-.${$("album-name")}:hover span,
-.${$("track-name")}:hover span,
-.${$("album-name")}:hover a,
-.${$("track-name")}:hover a {
-  animation: ${$("marquee")} infinite linear 5s;
+.${$('album-name')}:hover span,
+.${$('track-name')}:hover span,
+.${$('album-name')}:hover a,
+.${$('track-name')}:hover a {
+  animation: ${$('marquee')} infinite linear 5s;
   text-decoration: underline;
 }
-.${$("track-name")} {
+.${$('track-name')} {
   height: 1em;
   overflow: hidden;
   width: 100%;
 }
-.${$("album-image")} img {
+.${$('album-image')} img {
   height: inherit;
   width: 100%;
   border-radius: 5%;
 }
-.${$("album-image")} {
+.${$('album-image')} {
   flex-grow: 0;
   flex-shrink: 0;
   display: inline-block;
   height: 2.5em;
   width: 2.5em;
 }
-.${$("timestamp")} {
+.${$('timestamp')} {
   font-face: monospace;
   color: #ddd;
   font-size: 0.75em;
 }
-button.${$("button")} {
+button.${$('button')} {
   background: none;
 }
-.${$("button")} path {
+.${$('button')} path {
   fill: var(--interactive-normal);
 }
-.${$("button")}:hover path {
+.${$('button')}:hover path {
   fill: var(--interactive-active);
 }
-.${$("playback")} {
+.${$('playback')} {
   display: flex;
 }
-.${$("previous-button")} {
+.${$('previous-button')} {
   transform: scaleX(-1);
 }
-.${$("buttons")} {
+.${$('buttons')} {
   display: inline-flex;
   flex-shrink: 0;
   flex-grow: 0;
@@ -133,26 +133,26 @@ let style;
 export default {
   return: {
     onLoad() {
-      style = document.createElement("style");
+      style = document.createElement('style');
       style.innerText = moduleCSS;
       document.head.appendChild(style);
 
-      const {React} = webpackModules.common;
+      const { React } = webpackModules.common;
 
-      const AccountClasses = webpackModules.findByProps("usernameContainer");
+      const AccountClasses = webpackModules.findByProps('usernameContainer');
       const panels = reactUtils.getOwnerInstance(
         document.querySelector(
           `section[class^="panels-"] > .${AccountClasses.container}`
         )
       );
-      unpatch = patch(panels.__proto__, "render", (_, ret) => {
+      unpatch = patch(panels.__proto__, 'render', (_, ret) => {
         return [React.createElement(SpotifyPlayer), ret];
       });
       panels.forceUpdate();
     },
-    onunload()  {
+    onunload() {
       unpatch();
-      const AccountClasses = webpackModules.findByProps("usernameContainer");
+      const AccountClasses = webpackModules.findByProps('usernameContainer');
       const panels = reactUtils.getOwnerInstance(
         document.querySelector(
           `section[class^="panels-"] > .${AccountClasses.container}`
